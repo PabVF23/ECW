@@ -32,11 +32,12 @@ class Lector {
     }
 
     processFile(fileContents) {
-        $("section").append("<section></section>")
         this.processDocumentDescription($(fileContents).find("description"))
+        this.processDocumentContents($(fileContents).find("body"))
     }
 
     processDocumentDescription(fileDescription) {
+        $("section").append("<section></section>")
         var documentDataSection = $("section > section")
 
         documentDataSection.append("<h3>Datos del texto</h3>")
@@ -81,5 +82,23 @@ class Lector {
         } else {
             documentDataSection.append("<p>El texto no tiene año de publicación</p>")
         }
+    }
+
+    processDocumentContents(bodyContents) {
+        $("section > section").last().after("<section></section>")
+        var documentContentsSection = $("section > section").last()
+        $(bodyContents).find("emphasis").replaceWith(function() {
+            console.log(this.innerHtml)
+            return $("<em />").append($(this).contents())
+        })
+
+        $(bodyContents).find("strong").replaceWith(function() {
+            console.log(this.innerHtml)
+            return $("<b />").append($(this).contents())
+        })
+        var contents = $(bodyContents).find("p")
+        $.each(contents, (index, text) => {
+            $(documentContentsSection).append("<p>" + $(text).html() + "</p>")
+        })
     }
 }
