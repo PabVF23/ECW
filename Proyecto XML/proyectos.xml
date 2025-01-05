@@ -1,0 +1,17 @@
+<pagina 
+    xmlns="http://www.pabvf.es/plantilla" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pabvf.es/plantilla plantilla.xsd"
+    titulo="Mis proyectos" nombre-archivo="proyectos" ruta-estilo="../estilos/plantilla.css">
+    <elemento nivel="2" xsi:type="titulo">
+        <contenido>Mis proyectos</contenido>
+    </elemento>
+
+    <elemento xsi:type="parrafo">
+        <contenido>Una pequeña lista de mis proyectos</contenido>
+    </elemento>
+
+    <elemento tipo="desordenada" xsi:type="lista">
+        <elemento>Reproductor de música</elemento>
+        <elemento>Juego de la serpiente</elemento>
+        <elemento>Chat Bot</elemento>
+    </elemento>
+</pagina>

@@ -87,6 +87,7 @@ class Lector {
     processDocumentContents(bodyContents) {
         $("section > section").last().after("<section></section>")
         var documentContentsSection = $("section > section").last()
+        documentContentsSection.append("<h4>Contenido</h4>")
         $(bodyContents).find("emphasis").replaceWith(function() {
             console.log(this.innerHtml)
             return $("<em />").append($(this).contents())

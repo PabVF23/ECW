@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagina
+    xmlns="http://www.pabvf.es/plantilla" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pabvf.es/plantilla plantilla.xsd"
+    titulo="Inicio" nombre-archivo="index" ruta-estilo="../estilos/plantilla.css">
+    <elemento nivel="2" xsi:type="titulo">
+        <contenido>Bienvenido a mi página</contenido>
+    </elemento>
+</pagina>

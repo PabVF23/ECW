@@ -1,0 +1,41 @@
+<pagina
+    xmlns="http://www.pabvf.es/plantilla" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pabvf.es/plantilla plantilla.xsd"
+    titulo="Mis aficiones" nombre-archivo="aficiones" ruta-estilo="../estilos/plantilla.css">
+    <elemento nivel="2" xsi:type="titulo">
+        <contenido>Mis aficiones</contenido>
+    </elemento>
+
+    <elemento xsi:type="parrafo">
+        <contenido>Una pequeña lista de mis aficiones</contenido>
+    </elemento>
+
+    <elemento nivel="3" xsi:type="titulo">
+        <contenido>La música</contenido>
+    </elemento>
+
+    <elemento tipo="desordenada" xsi:type="lista">
+        <elemento>The Smiths</elemento>
+        <elemento>Metallica</elemento>
+        <elemento>Michael Jackson</elemento>
+    </elemento>
+
+    <elemento nivel="3" xsi:type="titulo">
+        <contenido>El cine</contenido>
+    </elemento>
+
+    <elemento tipo="desordenada" xsi:type="lista">
+        <elemento>Suspiria</elemento>
+        <elemento>Amanece que no es poco</elemento>
+        <elemento>La sustancia</elemento>
+    </elemento>
+
+    <elemento nivel="3" xsi:type="titulo">
+        <contenido>La literatura</contenido>
+    </elemento>
+
+    <elemento tipo="desordenada" xsi:type="lista">
+        <elemento>Dune</elemento>
+        <elemento>Cien años de soledad</elemento>
+        <elemento>A sangre fría</elemento>
+    </elemento>
+</pagina>

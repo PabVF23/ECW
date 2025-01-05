@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.pabvf.es/plantilla"
+xmlns="http://www.pabvf.es/plantilla"
+elementFormDefault="qualified">
+    <xs:element name="pagina">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="elemento" type="elemento" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="titulo" type="xs:string" use="required" />
+            <xs:attribute name="nombre-archivo" type="xs:string" use="required" />
+            <xs:attribute name="ruta-estilo" type="xs:string" use="optional" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="elemento" abstract="true"/>
+
+    <xs:complexType name="parrafo">
+        <xs:complexContent>
+            <xs:extension base="elemento">
+                <xs:sequence>
+                    <xs:element name="contenido" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="titulo">
+        <xs:complexContent>
+            <xs:extension base="elemento">
+                <xs:sequence>
+                    <xs:element name="contenido" type="xs:string"/>
+                </xs:sequence>
+
+                <xs:attribute name="nivel" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                            <xs:maxInclusive value="6"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="imagen">
+        <xs:complexContent>
+            <xs:extension base="elemento">
+                <xs:attribute name="ruta" type="xs:string" use="required"/>
+                <xs:attribute name="alt" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="lista">
+        <xs:complexContent>
+            <xs:extension base="elemento">
+                <xs:sequence>
+                    <xs:element name="elemento" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+
+                <xs:attribute name="tipo" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="ordenada"/>
+                            <xs:enumeration value="desordenada"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="seccion">
+        <xs:complexContent>
+            <xs:extension base="elemento">
+                <xs:sequence>
+                    <xs:element name="elemento" type="elemento" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

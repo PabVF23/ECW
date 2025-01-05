@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../estilos/plantilla.css" />
+    <title>Procesador de plantillas</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="procesador.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Procesador de plantillas</h1>
+    </header>
+
+    <main>
+        <h2>Bienvenido al procesador</h2>
+        <script>
+            var procesador = new Procesador();
+        </script>
+
+        <label for="cargarArchivo">Introduce tu archivo:</label>
+        <input type="file" id="cargarArchivo" onchange="procesador.readInputFile(this.files)">
+    </main>
+</body>

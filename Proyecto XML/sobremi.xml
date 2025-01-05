@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagina
+    xmlns="http://www.pabvf.es/plantilla" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pabvf.es/plantilla plantilla.xsd"
+    titulo="Sobre mi" nombre-archivo="sobremi" ruta-estilo="../estilos/plantilla.css">
+    <elemento nivel="2" xsi:type="titulo">
+        <contenido>Sobre mi</contenido>
+    </elemento>
+
+    <elemento xsi:type="seccion">
+        <elemento nivel="3" xsi:type="titulo">
+            <contenido>Nombre y apellidos</contenido>
+        </elemento>
+
+        <elemento xsi:type="parrafo">
+            <contenido>Pablo Valdés Fernández</contenido>
+        </elemento>
+
+        <elemento nivel="3" xsi:type="titulo">
+            <contenido>Correo electrónico</contenido>
+        </elemento>
+
+        <elemento xsi:type="parrafo">
+            <contenido>UO282655@uniovi.es</contenido>
+        </elemento>
+
+        <elemento nivel="3" xsi:type="titulo">
+            <contenido>Quién soy</contenido>
+        </elemento>
+
+        <elemento xsi:type="parrafo">
+            <contenido>Soy un alumno de la Universidad de Oviedo</contenido>
+        </elemento>
+
+        <elemento nivel="3" xsi:type="titulo">
+            <contenido>Foto</contenido>
+        </elemento>
+
+        <elemento xsi:type="parrafo">
+            <contenido>Una foto mia</contenido>
+        </elemento>
+
+        <elemento ruta="foto.png" alt="Una foto mía" xsi:type="imagen"/>
+    </elemento>
+</pagina>

@@ -1,0 +1,18 @@
+[package]
+name = "Proyecto"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+xml-rs = "0.8"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[dependencies.web-sys]
+version = "0.3"
+features = ["Document", "File", "FileReader", "HtmlElement", "NodeList", "Event", "Window", "HtmlInputElement", "Element", "FileList", "ProgressEvent", "DomParser", "console", "SupportedType"]

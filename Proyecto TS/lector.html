@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../estilos/plantilla.css" />
+    <title>Lector de FictionBook</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="lector.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Lector de FictionBook</h1>
+    </header>
+
+    <main>
+        <h2>Bienvenido al lector</h2>
+
+        <label for="cargarArchivo">Introduce tu archivo:</label>
+        <input type="file" id="cargarArchivo"/>
+
+        <script>
+            document.getElementById("cargarArchivo")?.addEventListener("change", function (event) {
+                const reader = new FB2Reader();
+                const fileInput = event.target;
+    
+                if (fileInput.files && fileInput.files[0]) {
+                    reader.readInputFile(fileInput.files[0]);
+                }
+            });
+        </script>
+    </main>
+</body>
